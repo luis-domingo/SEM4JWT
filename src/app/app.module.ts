@@ -8,9 +8,10 @@ import { backendProvider } from './backend';
 import { AppComponent } from './app.component';
 import { appRoutingModule } from './app.routing';
 
-import { JwtInterceptor, ErrorInterceptor } from './jwt_needs';
-import { HomeComponent } from './home';
-import { LoginComponent } from './login';
+import { JwtInterceptor  } from './jwt_needs/jwt.interceptor';
+import { ErrorInterceptor } from './jwt_needs/error.interceptor';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
     imports: [

@@ -1,8 +1,8 @@
 ﻿import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AuthenticationService } from './services';
-import { User } from './models';
+import { AuthenticationService } from './jwt_needs/authentication.service';
+import { User } from './models/user';
 
 @Component({ selector: 'app', templateUrl: 'app.component.html' })
 export class AppComponent {
