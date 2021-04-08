@@ -21,7 +21,15 @@
         ],
         "paths": {
             "@app/*": ["src/app/*"],
-            "@environments/*": ["src/environments/*"]
+            "@environments/*": ["src/environments/*"],
+            //Cosas nuevas
+            "crypto": [
+                "node_modules/jws"
+              ],
+              "stream": [
+                "node_modules/jws"
+              ]
+            //Hasta aquí
         }
     }
 }

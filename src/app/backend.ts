@@ -4,6 +4,7 @@ import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 
 import { User } from '@app/models/user';
+import { jwt } from 'jsonwebtoken';
 
 const users: User[] = [ { id: 1, username: 'roc', password: 'androll', firstName: 'Roc', lastName: 'Messeguer' }, 
                         { id: 2, username: 'miguel', password: 'marin', firstName: 'Miguel', lastName: 'Marin' }];
@@ -43,7 +44,8 @@ export class BackendInterceptor implements HttpInterceptor {
                 username: user.username,
                 firstName: user.firstName,
                 lastName: user.lastName,
-                token: 'fake-jwt-token'
+                token: jwt.sign({username:"ado"}, 'supersecret',{expiresIn: 120})
+                //token: 'fake-jwt-token'
             })
         }
 
